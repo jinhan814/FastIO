@@ -70,7 +70,7 @@ public:
 	~OUTPUT() { Flush(); }
 	explicit operator bool() { return 1; }
 	void Flush() {
-        write(1, write_buf, write_idx);
+		write(1, write_buf, write_idx);
 		write_idx = 0;
 	}
 	void WriteChar(char c) {
